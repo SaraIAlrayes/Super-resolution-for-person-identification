@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>VDSR | SR for Person Identification</title>
+
+  <!-- Metadata -->
+  <meta name="description" content="Super-Resolution using Deep Learning to Support Person Identification in Surveillance Video">
+  <meta name="keywords" content=" Deep learning, image processing, super-resolution, surveillance video">
+  <meta name="author" content="Sara Alrayes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Source+Code+Pro:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- Fontawesome -->
+  <script src="https://kit.fontawesome.com/52e276fb65.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+
+</head>
+
+<body>
+
+  <!-- Navbar and Title section -->
+  <header>
+
+    <!-- NavBar -->
+    <nav class="navbar fixed-top navbar-expand-lg">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarelements" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars toggler-icon"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarelements">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-item nav-link" href="#about">about</a>
+          <a class="nav-item nav-link" href="#network">network</a>
+          <a class="nav-item nav-link" href="#results">results</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="row title-container">
+
+
+      <div class="col-md-5 col-12">
+        <img src="resources/header_img.png" class="title-img">
+      </div>
+
+      <div class="col-md-7 col-12 align-self-center">
+        <div class="title-details-container">
+          <h1 class="main-title">
+            Super-Resolution using Deep Learning to Support Person Identification in Surveillance Video.
+          </h1>
+          <p class="sub-title">
+            Research project for the degree of Bachelor in Computer Science.
+          </p>
+          <a type="button" class="btn title-paper-btn" href="https://thesai.org/Publications/ViewPaper?Volume=11&Issue=7&Code=IJACSA&SerialNo=49">Read paper</a>
+        </div>
+      </div>
+
+
+    </div>
+
+  </header>
+
+  <!-- about -->
+  <section id="about">
+    <div class="about-container">
+      <div class="row">
+
+        <div class="col-md-4 col-12">
+          <img src="resources/about_img.png" class="about-img">
+        </div>
+
+        <div class="col-md-8 col-12">
+
+          <p class="about-main-title">About</p>
+
+          <ul class="title-navbar-list">
+            <li class="active about-title">Problem statment</li>
+            <li class="about-title">Proposed solution</li>
+          </ul>
+
+          <p class="about-description">
+            <span class="problem-statment">
+              Recently, video surveillance systems have been perceived as important technical tools that play a fundamental role in protecting people and assets. In particular, the recorded surveillance video sequences are used as evidence to solve
+              violation, theft and criminal cases. Therefore, the identification of the person present on the crime scene becomes a critical task.
+              However, the captured videos usually exhibit low-resolution quality. This prevents the identification of the suspect especially if he is away from the camera and/or if the scene is crowded. Besides, zooming in a small region of a
+              low-resolution image, such as the suspect face, degrades further the quality of the region of interest and makes the identification task even more difficult.
+            </span>
+            <span class="proposed-solution" style="display: none;">
+              To alleviate the problem, we proposed a super-resolution system that aims to enhance the surveillance video quality in order to support the suspect identification. The proposed system relies on the super-resolution technique that
+              consists in recovering high-resolution images from low-resolution ones. More specially, we used the Very-Deep Super-Resolution (VDSR) neural network to enhance the image quality in an automatic manner.
+            </span>
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Network structure -->
+  <section id="network">
+
+    <!-- Header -->
+    <div id="particles-js">
+      <p class="network-header-title">Very Deep Super Resolution Network Structure</p>
+    </div>
+
+    <!-- Network structure -->
+    <div class="network-structure-container">
+      <div class="row">
+        <div class="col-1 input-layer-container">
+          <img src="resources/network_input.png" class="network-layer-img" style="float: right;">
+        </div>
+        <div class="col-9 hidden-layers-container">
+          <img src="resources/network_hidden.png" class="network-layer-img">
+        </div>
+        <div class="col-2 output-layer-container">
+          <img src="resources/network_output.png" class="network-layer-img">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="network-structure-description-container">
+
+      <p>
+        <span class="input-layer-title">
+          Input layer:
+        </span>
+        <span class="hidden-layers-title" style="display: none;">
+          Hidden Layers:
+        </span>
+        <span class="output-layer-title" style="display: none;">
+          Output Layer:
+        </span>
+      </p>
+
+      <p>
+        <span class="input-layer-description">
+          It is the first layer. It takes as an input an interpolated low-resolution (ILR) image with the luminance channel of the input. The layer operates on the input . The size of the patches
+          depends on the network receptive field which size is equal to the input image, in order to let the field views all the high features of the image.
+        </span>
+        <span class="hidden-layers-description" style="display: none;">
+          The image input layer is followed by 19 alternating convolutional and rectified linear unit (ReLU) layers. The convolutional layer contains 64 filters each of size 3×3×64. They are applied to 3×3 regions across 64 channels of the input to
+          extract features. The units (neurons) in the first convolutional layer are connected to local regions of the input image, and so on, each unit in convolutional layer m are connected to a subset of units of convolutional layer m-1. Thus,
+          each unit has its own receptive field with respect to its input. This design implies that the learned filters of the network generate the highest response to a local input feature.
+          When the number of sequential layers is large, the filters by time become global, which leads to increase the size of the receptive field by 2 in height and width, the size is calculated by the formula: (2D+1)(2D+1), where D is the number
+          of the convolutional layer. In VDSR, there are 20 convolutional layers, so the receptive field (as well as the size of the patch) is 41 by 41. In SR, a large receptive field means large contextual information is taken into consideration
+          when predicting image details.
+        </span>
+        <span class="output-layer-description" style="display: none;">
+          The penultimate layer is a convolutional layer, it has only one filter of size 3×3×64 for constructing the residual image which is added to the interpolated low-resolution image to obtain the high resolution image. It is followed by a
+          regression unit.
+        </span>
+      </p>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section id="results">
+
+    <div class="results-container">
+      <p class="results-title">Final Result</p>
+      <div class="row">
+        <div class="col-md-4 col-12 result-column">
+          <div class="result-container">
+            <div class="result-fig-container">
+              <svg width="100%" height="100%" viewBox="0 0 40 40" class="chart">
+                <circle class="chart-hole" cx="20" cy="20" r="15.91549430918954" fill="transparent"></circle>
+                <circle class="chart-ring" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke-width="3.5"></circle>
+                <circle class="chart-segment psnr-segment" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke-width="3.5" stroke-dasharray="7 93" stroke-dashoffset="25"></circle>
+                <g class="chart-text psnr-text">
+                  <text y="50%" transform="translate(0, 2)">
+                    <tspan x="50%" text-anchor="middle" class="chart-percent">7%</tspan>
+                  </text>
+                  <text y="60%" transform="translate(0, 2)">
+                    <tspan x="50%" text-anchor="middle" class="chart-data">PSNR Improvement</tspan>
+                  </text>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-12 result-column">
+          <div class="result-container">
+            <div class="result-fig-container">
+              <svg width="100%" height="100%" viewBox="0 0 40 40" class="chart">
+                <circle class="chart-hole" cx="20" cy="20" r="15.91549430918954" fill="transparent"></circle>
+                <circle class="chart-ring" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke-width="3.5"></circle>
+                <circle class="chart-segment ssim-segment" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke-width="3.5" stroke-dasharray="3 97" stroke-dashoffset="25"></circle>
+                <g class="chart-text ssim-text">
+                  <text y="50%" transform="translate(0, 2)">
+                    <tspan x="50%" text-anchor="middle" class="chart-percent">3%</tspan>
+                  </text>
+                  <text y="60%" transform="translate(0, 2)">
+                    <tspan x="50%" text-anchor="middle" class="chart-data">SSIM Improvement</tspan>
+                  </text>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-12 result-column">
+          <div class="result-container">
+            <div class="result-fig-container">
+              <svg width="100%" height="100%" viewBox="0 0 40 40" class="chart">
+                <circle class="chart-hole" cx="20" cy="20" r="15.91549430918954" fill="transparent"></circle>
+                <circle class="chart-ring" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke-width="3.5"></circle>
+                <circle class="chart-segment reco-segment" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke-width="3.5" stroke-dasharray="45.7 45.3" stroke-dashoffset="25"></circle>
+                <g class="chart-text reco-text">
+                  <text y="50%" transform="translate(0, 2)">
+                    <tspan x="50%" text-anchor="middle" class="chart-percent">45.7%</tspan>
+                  </text>
+                  <text y="60%" transform="translate(0, 2)">
+                    <tspan x="50%" text-anchor="middle" class="chart-data">Face recognition</tspan>
+                  </text>
+                  <text y="70%" transform="translate(0, 2)">
+                    <tspan x="50%" text-anchor="middle" class="chart-data">Improvement</tspan>
+                  </text>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </section>
+
+  <!-- Team -->
+  <section id="team">
+    <div class="team-container">
+
+      <p class="team-title">Our Team</p>
+      <div class="members-container">
+
+        <div class="member-container">
+          <img src="resources/team_img1.png" class="member-img">
+          <p class="member-name">Dr. Ouiem Bchir</p>
+          <p class="member-email">obchir@ksu.edu.sa</p>
+        </div>
+
+        <div class="member-container">
+          <img src="resources/team_img2.png" class="member-img">
+          <p class="member-name">Lamya Alkanhal</p>
+          <p class="member-email">LamyaAlkanhal@gmail.com</p>
+        </div>
+
+        <div class="member-container">
+          <img src="resources/team_img3.png" class="member-img">
+          <p class="member-name">Sara Alrayes</p>
+          <p class="member-email">SaraIAlrayes@gmail.com</p>
+        </div>
+
+        <div class="member-container">
+          <img src="resources/team_img2.png" class="member-img">
+          <p class="member-name">Ghaida Alshemali</p>
+          <p class="member-email">GhaidaAlshemali@gmail.com</p>
+        </div>
+
+        <div class="member-container">
+          <img src="resources/team_img4.png" class="member-img">
+          <p class="member-name">Nada Albrahim</p>
+          <p class="member-email">NaiAlbrahim.1998@gmail.co</p>
+        </div>
+
+        <div class="member-container">
+          <img src="resources/team_img1.png" class="member-img">
+          <p class="member-name">Deena Alotaibi</p>
+          <p class="member-email">CS.deena1@gmail.com</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <p class="copyright-text">&copy 2020 All rights reserved. by <a class="copyright-link" href="https://sara-alrayes.herokuapp.com/">Sara Alrayes.</a></p>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js\index.js" type="text/javascript"></script>
+
+</body>
+
+</html>
