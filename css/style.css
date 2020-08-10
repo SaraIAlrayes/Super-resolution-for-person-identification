@@ -40,10 +40,6 @@ body {
   padding-bottom: 7%;
 }
 
-.title-details-container {
-  padding-left: 15%;
-}
-
 .main-title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
@@ -91,45 +87,6 @@ body {
     transform: translatey(0px);
   }
 }
-
-/* Team */
-/* .team-container {
-  padding-right: 10%;
-  padding-left: 10%;
-  margin-top: -5%;
-}
-
-.member-column {
-  padding: 15px;
-}
-
-.member-container {
-  background-color: #f3f6f6;
-  padding-top: 15px;
-  padding-bottom: 10px;
-  border-radius: 50%;
-  text-align: center;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.member-icon {
-  color: #052c3b;
-  margin-bottom: 10px;
-}
-
-.member-name {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.5rem;
-  color: #052c3b;
-  margin-bottom: 0;
-}
-
-.member-email {
-  font-family: 'Source Code Pro', monospace;
-  font-size: 0.5rem;
-  color: #052c3b;
-  margin-bottom: 0;
-} */
 
 /* About */
 .about-container {
@@ -497,7 +454,6 @@ canvas {
     text-align: center;
   }
   .title-details-container {
-    padding-left: 0;
     text-align: center;
   }
   #particles-js {
